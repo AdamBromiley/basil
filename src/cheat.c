@@ -1,9 +1,9 @@
 #include "cheat.h"
 
 #include "csv.h"
-#include "fullname.h"
+#include "full_name.h"
 #include "mouse.h"
-#include "programname.h"
+#include "program_name.h"
 #include "random.h"
 
 #include <ctype.h>

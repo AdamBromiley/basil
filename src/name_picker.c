@@ -1,7 +1,7 @@
 #include "cheat.h"
 #include "csv.h"
-#include "fullname.h"
-#include "programname.h"
+#include "full_name.h"
+#include "program_name.h"
 #include "random.h"
 
 #include <errno.h>
@@ -17,7 +17,7 @@ char *programName = NULL;
 
 
 static int usage(void);
-static int csvNameDrawer(FILE *fp, bool mode, char c);
+static int csvNamePicker(FILE *fp, bool mode, char c);
 static int getRandomName(FullName *name, CSV *csv);
 
 
@@ -112,7 +112,7 @@ int main(int argc, char **argv)
         return EXIT_FAILURE;
     }
 
-    if (csvNameDrawer(inputFile, mode, cheatChar))
+    if (csvNamePicker(inputFile, mode, cheatChar))
     {
         fclose(inputFile);
         return EXIT_FAILURE;
@@ -154,7 +154,7 @@ static int usage(void)
 
 
 /* Entry to main program */
-static int csvNameDrawer(FILE *fp, bool mode, char c)
+static int csvNamePicker(FILE *fp, bool mode, char c)
 {
     CSV *csv;
     FullName name;

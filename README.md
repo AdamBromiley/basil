@@ -1,4 +1,4 @@
-# CSV Name Drawer
+# CSV Name Picker
 
 A utility program for drawing a random name from a CSV file.
 
@@ -23,7 +23,7 @@ Run the program with `./drawname`. By default, without any command-line argument
 **Note: The provided CSV file MUST conform to standards. This means CRLF line endings and properly escaped symbols are necessary.**
 
 ### Cheating
-CSV Name Drawer has a way of discreetly cheating to only select those with first names beginning with a given letter of the alphabet.
+CSV Name Picker has a way of discreetly cheating to only select those with first names beginning with a given letter of the alphabet.
 
 To enable cheats, `-c`/`--cheat` must be used when invoking the program. At this point, the letter may be selected as an argument to the option.
 

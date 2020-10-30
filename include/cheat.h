@@ -3,7 +3,7 @@
 
 
 #include "csv.h"
-#include "fullname.h"
+#include "full_name.h"
 
 
 int cheat(FullName *name, CSV *csv, char c);

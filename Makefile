@@ -14,17 +14,17 @@ BDIR = .
 BIN = $(BDIR)/$(_BIN)
 
 # Source code
-_SRC = cheat.c namedrawer.c mouse.c
+_SRC = cheat.c name_picker.c mouse.c
 SDIR = src
 SRC = $(patsubst %,$(SDIR)/%,$(_SRC))
 
 # Header files
-_DEPS = cheat.h fullname.h mouse.h programname.h
+_DEPS = cheat.h full_name.h mouse.h program_name.h
 HDIR = include
 DEPS = $(patsubst %,$(HDIR)/%,$(_DEPS))
 
 # Object files
-_OBJS = cheat.o namedrawer.o mouse.o
+_OBJS = cheat.o name_picker.o mouse.o
 ODIR = obj
 OBJS = $(patsubst %,$(ODIR)/%,$(_OBJS))
 
