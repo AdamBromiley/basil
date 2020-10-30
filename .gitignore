@@ -1,0 +1,17 @@
+# Ignore all
+*
+# Unignore all with extensions (to leave binaries ignored)
+!*.*
+# Unignore all directories
+!*/
+
+# Unignore useful, extensionless files
+!Makefile
+
+# Object files
+*.o
+*.so
+**/obj
+
+# Visual Studio Code configuration
+.vscode/

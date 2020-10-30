@@ -1,0 +1,27 @@
+<csv-file> ::= <header> | <header> <records> | <records>
+
+<records> ::= <line> | <final-record> | <line> <records>
+
+<line> ::= <record> <eol>
+<final-record> ::= <record> | <record> <eol>
+
+<header> ::= <field> | <field> <comma> <header>
+<record> ::= <field> | <field> <comma> <record>
+
+<field> ::= <escaped-field> | <unescaped-field>
+
+<escaped-field> ::= <double-quote> <escaped-str> <double-quote>
+<escaped-str> ::= <escapable-char> | <escapable-char> <escaped-str>
+<escapable-char> ::= <regular-char> | <comma> | <lf> | <cr> | <double-quote> <double-quote>
+
+<unescaped-field> ::= <regular-char> | <regular-char> <unescaped-field>
+
+<eol> ::= <cr> <lf>
+
+; \x20, \x21, \x23 to \x2B, \x2D to \x7E
+<regular-char> ::= " " | "!" | "#" | "$" | "%" | "&" | "'" | "(" | ")" | "*" | "+" | "-" | "." | "/" | "0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9" | ":" | ";" | "<" | "=" | ">" | "?" | "@" | "A" | "B" | "C" | "D" | "E" | "F" | "G" | "H" | "I" | "J" | "K" | "L" | "M" | "N" | "O" | "P" | "Q" | "R" | "S" | "T" | "U" | "V" | "W" | "X" | "Y" | "Z" | "[" | "\\" | "]" | "^" | "_" | "`" | "a" | "b" | "c" | "d" | "e" | "f" | "g" | "h" | "i" | "j" | "k" | "l" | "m" | "n" | "o" | "p" | "q" | "r" | "s" | "t" | "u" | "v" | "w" | "x" | "y" | "z" | "{" | "|" | "}" | "~"
+
+<comma> ::= ","
+<lf> ::= "\n"
+<cr> ::= "\r"
+<double-quote> ::= '"'
